@@ -3,7 +3,6 @@ import Header from "./components/Header";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "./Home";
 import Courses2020 from "./pages/courses/Courses2020";
-import Scrollup from "./components/Common/ScrollUp";
 import Courses2015 from "./pages/courses/Courses2015";
 import Courses2017 from "./pages/courses/Courses2017";
 
@@ -12,7 +11,6 @@ const App = () => {
     <>
       <Header />
       <div>
-        <Scrollup />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/courses" element={<Navigate to="/courses/2020" />} />
