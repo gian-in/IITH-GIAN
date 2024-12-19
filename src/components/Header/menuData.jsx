@@ -42,7 +42,7 @@ const menuData = [
       },
       {
         id: 53,
-        title: "2014-2016",
+        title: "2015-2016",
         path: "/courses/2015-2016",
         newTab: false,
       },
