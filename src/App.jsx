@@ -1,7 +1,7 @@
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { Routes, Route, Navigate } from "react-router-dom";
-import Home from "./Home";
+import Home from "./pages/home/Home";
 import Courses2020 from "./pages/courses/Courses2020";
 import Courses2015 from "./pages/courses/Courses2015";
 import Courses2017 from "./pages/courses/Courses2017";
