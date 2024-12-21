@@ -134,8 +134,8 @@ export default function TableUI({ courses = [] }) {
     let filteredUsers = [...courses];
 
     if (hasSearchFilter) {
-      filteredUsers = filteredUsers.filter((user) =>
-        user.name.toLowerCase().includes(filterValue.toLowerCase())
+      filteredUsers = filteredUsers.filter((course) =>
+        course.courseName.toLowerCase().includes(filterValue.toLowerCase())
       );
     }
     if (
