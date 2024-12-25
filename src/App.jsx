@@ -6,7 +6,8 @@ import Courses2020 from "./pages/courses/Courses2020";
 import Courses2015 from "./pages/courses/Courses2015";
 import Courses2017 from "./pages/courses/Courses2017";
 import Contact from "./pages/contact/Contact";
-import Objectives from "./pages/Objectives/Objectives";
+import Objectives from "./pages/objectives/Objectives";
+import Guidelines from "./pages/guidelines/Guidelines";
 
 const App = () => {
   return (
@@ -21,8 +22,7 @@ const App = () => {
           <Route path="/courses/2015-2016" element={<Courses2015 />} />
           <Route path="/objectives" element={<Objectives />} />
           <Route path="/contact" element={<Contact />} />
-          {/* <Route path="/blog" element={<Blog />} /> */}
-          {/* <Route path="/blog-details" element={<BlogDetails />} /> */}
+          <Route path="/guidelines-forms" element={<Guidelines />} />
         </Routes>
       </div>
       <Footer />
