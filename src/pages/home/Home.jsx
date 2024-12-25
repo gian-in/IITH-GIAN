@@ -1,11 +1,13 @@
-import { useState } from "react";
-import SectionTitle from "../../components/Common/SectionTitle";
+// import { useState } from "react";
+// import SectionTitle from "../../components/Common/SectionTitle";
 import LatestCourses from "../../components/LatestCourses";
+import ScrollUp from "../../components/Common/ScrollUp";
 
 const Home = () => {
   return (
     <>
-    <section className="relative z-10 py-16 md:py-20 lg:py-28 lg:mt-12 md:mt-8 mt-4">
+    <ScrollUp />
+    {/* <section className="relative z-10 py-16 md:py-20 lg:py-28 lg:mt-12 md:mt-8 mt-4">
       <div className="container">
         <SectionTitle
           title="Welcome to GIAN IIT Hyderabad"
@@ -28,7 +30,7 @@ const Home = () => {
         </div>
       </div>
       <div className="absolute bottom-0 left-0 right-0 z-[-1] h-full w-full bg-[url(/images/shape.svg)] bg-cover bg-center bg-no-repeat"></div>
-    </section>
+    </section> */}
     <LatestCourses />
     </>
   );

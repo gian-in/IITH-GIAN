@@ -6,12 +6,12 @@ const LatestCourses = () => {
   return (
     <section
       id="latest-courses"
-      className="bg-gray-light dark:bg-bg-color-dark py-16 md:py-20 lg:py-28"
+      className="bg-gray-light dark:bg-bg-color-dark py-32 md:py-36 lg:py-40 relative z-10"
     >
       <div className="container">
         <SectionTitle
-          title="Our Latest Courses"
-          paragraph="We offer a wide range of courses to help you grow your career. Here are some of our latest courses."
+          title="Latest Courses at IITH"
+          paragraph="Here are some of the latest courses."
           center
         />
 
