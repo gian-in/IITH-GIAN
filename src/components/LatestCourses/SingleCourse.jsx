@@ -1,7 +1,18 @@
 import { Link } from "react-router-dom";
 
 const SingleCourse = ({ course }) => {
-  const { title, image, startDate, endDate } = course;
+  const { title, image } = course;
+  var {startDate, endDate} = course;
+  startDate = new Date(startDate).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  })
+  endDate = new Date(endDate).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  })
   return (
     <>
       <div className="group relative overflow-hidden rounded-sm bg-white shadow-one duration-300 hover:shadow-two dark:bg-dark dark:hover:shadow-gray-dark">
