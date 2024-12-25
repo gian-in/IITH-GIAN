@@ -13,14 +13,8 @@ const menuData = [
   },
   {
     id: 3,
-    title: "Guidelines",
-    path: "/guidelines",
-    newTab: false,
-  },
-  {
-    id: 4,
-    title: "Resources",
-    path: "/resources",
+    title: "Guidelines & Forms",
+    path: "/guidelines-forms",
     newTab: false,
   },
   {
