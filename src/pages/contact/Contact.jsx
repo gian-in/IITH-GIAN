@@ -29,7 +29,7 @@ const Contact = () => {
                       Email:{" "}
                       <a
                         href="mailto:anil@iith.ac.in"
-                        className="text-blue-500 hover:underline"
+                        className="text-primary hover:underline"
                       >
                         anil@iith.ac.in
                       </a>
@@ -38,7 +38,7 @@ const Contact = () => {
                       Phone:{" "}
                       <a
                         href="tel:+91 (040) 2301 6312"
-                        className="text-blue-500 hover:underline"
+                        className="text-primary hover:underline"
                       >
                         +91 (040) 2301 6312
                       </a>
@@ -59,7 +59,7 @@ const Contact = () => {
                 </p>
                 <p className="text-base mt-4">
                   Email :{" "}
-                  <a href="mailto:gian@iith.ac.in" className="text-blue-500 hover:underline"
+                  <a href="mailto:gian@iith.ac.in" className="text-primary hover:underline"
                   >gian@iith.ac.in</a>
                 </p>
               </div>
