@@ -5,6 +5,7 @@ import Home from "./pages/home/Home";
 import Courses2020 from "./pages/courses/Courses2020";
 import Courses2015 from "./pages/courses/Courses2015";
 import Courses2017 from "./pages/courses/Courses2017";
+import Contact from "./pages/contact/Contact";
 
 const App = () => {
   return (
@@ -18,7 +19,7 @@ const App = () => {
           <Route path="/courses/2017-2019" element={<Courses2017 />} />
           <Route path="/courses/2015-2016" element={<Courses2015 />} />
           {/* <Route path="/services" element={<Services />} /> */}
-          {/* <Route path="/contact" element={<Contact />} /> */}
+          <Route path="/contact" element={<Contact />} />
           {/* <Route path="/blog" element={<Blog />} /> */}
           {/* <Route path="/blog-details" element={<BlogDetails />} /> */}
         </Routes>
