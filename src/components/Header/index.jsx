@@ -35,7 +35,6 @@ const Header = () => {
 
   const location = useLocation();
   const usePathName = location.pathname;
-  console.log(usePathName);
 
   return (
     <>
