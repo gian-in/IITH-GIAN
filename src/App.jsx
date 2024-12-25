@@ -8,6 +8,7 @@ import Courses2017 from "./pages/courses/Courses2017";
 import Contact from "./pages/contact/Contact";
 import Objectives from "./pages/objectives/Objectives";
 import Guidelines from "./pages/guidelines/Guidelines";
+import ErrorPage from "./pages/error/page";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/objectives" element={<Objectives />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/guidelines-forms" element={<Guidelines />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </div>
       <Footer />
