@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Breadcrumb from "../../components/Common/Breadcrumb";
 import ScrollUp from "../../components/Common/ScrollUp";
+import axios from "axios";
+import parse from "html-react-parser";
 
 const Objectives = () => {
+  const [objectives, setObjectives] = React.useState(null || "");
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_API}/objectives`)
+      .then((response) => {
+        setObjectives(response.data.objectives);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
   return (
     <>
       <ScrollUp />
@@ -13,17 +26,10 @@ const Objectives = () => {
       >
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4">
+            <div className="w-full px-4 lg:px-12">
               <div className="text-base mb-8 sm:text-base md:text-lg lg:text-lg">
-                <p>
-                  The Global Initiative on Academic Networks (GIAN) aims to
-                  provide a platform for the best international experts to
-                  interact with faculty and students in India to inspire ideas,
-                  share knowledge, and motivate people to learn and work together
-                  in a global environment. The GIAN program is designed to
-                  catalyze higher education institutions in India to build
-                  stronger academic and research collaborations with the best
-                  institutions in the world.
+                <p className="prose max-w-none prose-lg md:prose-base sm:prose-sm lg:prose-lg">
+                  {parse(objectives)}
                 </p>
               </div>
             </div>
