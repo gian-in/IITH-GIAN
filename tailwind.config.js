@@ -2,6 +2,7 @@
 
 const colors = require("tailwindcss/colors");
 const { nextui } = require("@nextui-org/react");
+const typography = require("@tailwindcss/typography");
 
 export default {
   content: [
@@ -80,6 +81,7 @@ export default {
     },
   },
   plugins: [
-    nextui()
+    nextui(),
+    typography,
   ],
 };
