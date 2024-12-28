@@ -64,7 +64,7 @@ const Header = () => {
                   />
                   <img
                     src="/assets/gian.webp"
-                    alt="IITH"
+                    alt="GIAN"
                     width={120}
                     height={20}
                     className="block dark:block lg:hidden xl:block 2xl:block"
