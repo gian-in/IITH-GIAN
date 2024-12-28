@@ -18,7 +18,7 @@ const Contact = () => {
                 <h3 className="mb-12 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">Local Coordinator</h3>
                 <div className="flex flex-col items-start space-x-0 lg:items-center lg:space-x-12 lg:flex-row">
                   <img
-                    src="assets/anil.png"
+                    src="assets/anil.webp"
                     alt="teacher"
                     className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded"
                   />
