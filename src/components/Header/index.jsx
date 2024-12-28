@@ -54,7 +54,7 @@ const Header = () => {
                   sticky ? "py-5 lg:py-2" : "py-8"
                 } `}
               >
-                <div className="flex items-center space-x-4">
+                <div className="space-x-2 flex items-center sm:space-x-8">
                   <img
                     src="/assets/IITHlogo.webp"
                     alt="IITH"
@@ -62,24 +62,17 @@ const Header = () => {
                     height={20}
                     className="dark:block"
                   />
-                  {/* <img
-                    src="/assets/Ministry_of_Education_India.svg"
-                    alt="Ministry of Education"
-                    width={80}
-                    height={20}
-                    className="dark:hidden"
-                  /> */}
-                  {/* <img
+                  <img
                     src="/assets/gian.webp"
-                    alt="GIAN"
-                    width={50}
+                    alt="IITH"
+                    width={120}
                     height={20}
-                    className="dark:block"
-                  /> */}
+                    className="block dark:block lg:hidden xl:block 2xl:block"
+                  />
                 </div>
               </Link>
             </div>
-            <div className="flex w-full items-center justify-between px-4">
+            <div className="flex w-full items-center justify-between px-4 xl:justify-end xl:gap-12">
               <div>
                 <button
                   onClick={navbarToggleHandler}
@@ -166,12 +159,6 @@ const Header = () => {
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-                {/* <Link
-                  to="/signin"
-                  className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
-                >
-                  Sign In
-                </Link> */}
                 <Link
                   to="https://gian.iith.ac.in/"
                   target="_blank"
@@ -179,9 +166,6 @@ const Header = () => {
                 >
                   GIAN National Page
                 </Link>
-                {/* <div>
-                  <ThemeToggler />
-                </div> */}
               </div>
             </div>
           </div>
