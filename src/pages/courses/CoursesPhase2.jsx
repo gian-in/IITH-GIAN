@@ -1,17 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Breadcrumb from "../../components/Common/Breadcrumb";
 import TableUI from "./TableUI";
-import { courses } from "./sampledata";
+// import { courses } from "./sampledata";
 import ScrollUp from "../../components/Common/ScrollUp";
+import axios from "axios";
 
-const Courses2015 = () => {
+const CoursesPhase2 = () => {
+  const [courses, setCourses] = React.useState([]);
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_API_FP2}/courses/2`)
+      .then((res) => {
+        setCourses(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
     <>
       <ScrollUp />
       <Breadcrumb
-        pageName={"Courses 2015 - 2016"}
+        pageName={"Courses Phase 2"}
         description={
-          "List of all the courses held at IITH for the year 2015 - 2016"
+          "List of all the courses held at IITH for GIAN Phase 2"
         }
       />
       <section id="contact" className="overflow-hidden py-4 md:py-8 lg:py-10">
@@ -27,4 +39,4 @@ const Courses2015 = () => {
   );
 };
 
-export default Courses2015;
+export default CoursesPhase2;
