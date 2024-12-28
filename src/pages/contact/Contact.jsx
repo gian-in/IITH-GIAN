@@ -25,13 +25,16 @@ const Contact = () => {
                   <div className="space-y-1">
                     <h4 className="text-xl font-bold">Dr. Anil Agarwal</h4>
                     <p className="text-base">Local Coordinator</p>
+                    <p className="text-base pt-2">Associate Professor</p>
+                    <p className="text-base">Department of Civil Engineering</p>
+                    <p className="text-base pb-2">Room B-221, IIT Hyderabad</p>
                     <p className="text-base">
                       Email:{" "}
                       <a
-                        href="mailto:anil@iith.ac.in"
+                        href="mailto:anil@ce.iith.ac.in"
                         className="text-primary hover:underline"
                       >
-                        anil@iith.ac.in
+                        anil@ce.iith.ac.in
                       </a>
                     </p>
                     <p className="text-base">
@@ -54,13 +57,8 @@ const Contact = () => {
                   Sangareddy (Mandal), <br />
                   Sangareddy (District), <br />
                   Telangana, <br />
-                  INDIA <br />
+                  India <br />
                   Pincode: 502284
-                </p>
-                <p className="text-base mt-4">
-                  Email :{" "}
-                  <a href="mailto:gian@iith.ac.in" className="text-primary hover:underline"
-                  >gian@iith.ac.in</a>
                 </p>
               </div>
             </div>
