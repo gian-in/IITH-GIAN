@@ -1,7 +1,31 @@
-import latestCourses from "./sample";
-import SingleCourse from "./SingleCourse";
+// import latestCourses from "./sample";
+import { useEffect, useState } from "react";
+import Guideline from "./Guideline";
+import Form from "./Form";
+import axios from "axios";
 
 const Guidelines = () => {
+  const [guidelines, setGuidelines] = useState([]);
+  const [forms, setForms] = useState([]);
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_API_FP2}/guidelines`)
+      .then((res) => {
+        setGuidelines(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+    axios
+      .get(`${import.meta.env.VITE_API_FP2}/forms`)
+      .then((res) => {
+        setForms(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
     <section id="guidelines" className="py-4 md:py-8 lg:py-12 relative z-10">
       <div className="mb-20" id="guidelines">
@@ -9,9 +33,9 @@ const Guidelines = () => {
           Guidelines
         </h3>
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 md:gap-x-6 lg:gap-x-8 xl:grid-cols-3">
-          {latestCourses.map((course) => (
+          {guidelines.map((course) => (
             <div key={course.id} className="w-full">
-              <SingleCourse course={course} />
+              <Guideline course={course} />
             </div>
           ))}
         </div>
@@ -21,9 +45,9 @@ const Guidelines = () => {
           Forms
         </h3>
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 md:gap-x-6 lg:gap-x-8 xl:grid-cols-3">
-          {latestCourses.map((course) => (
+          {forms.map((course) => (
             <div key={course.id} className="w-full">
-              <SingleCourse course={course} />
+              <Form course={course} />
             </div>
           ))}
         </div>
