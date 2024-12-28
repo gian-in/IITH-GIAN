@@ -147,7 +147,7 @@ const Footer = () => {
                       to="/contact"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Contact
+                      Contacts
                     </Link>
                   </li>
                 </ul>
@@ -186,6 +186,14 @@ const Footer = () => {
                     >
                       Research
                     </Link>
+                  </li><li>
+                    <Link
+                      to="https://cce.iith.ac.in/"
+                      target="_blank"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    >
+                      CCE IITH
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -212,7 +220,7 @@ const Footer = () => {
                       target="_blank"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      GIAN Portal
+                      GIAN Login Webpage
                     </Link>
                   </li>
                 </ul>
