@@ -20,8 +20,9 @@ export const columns = [
   { name: "Course Code", uid: "courseCode" },
   { name: "Course Name", uid: "courseName" },
   { name: "Course Coordinator", uid: "courseCoordinator" },
-  { name: "Expert Faculty", uid: "expertFaculty" },
-  { name: "Course Duration", uid: "courseDuration" },
+  { name: "Foreign Faculty", uid: "foreignFaculty" },
+  { name: "Start Date", uid: "startDate" },
+  { name: "End Date", uid: "endDate" },
   { name: "Status", uid: "status" },
 ];
 
@@ -29,6 +30,8 @@ export const statusOptions = [
   { name: "Running", uid: "running" },
   { name: "Completed", uid: "completed" },
   { name: "Upcoming", uid: "upcoming" },
+  { name: "Cancelled", uid: "cancelled" },
+  {name : "Submitted", uid: "submitted"},
 ];
 
 export function capitalize(s) {
@@ -94,6 +97,8 @@ const statusColorMap = {
   completed: "success",
   upcoming: "primary",
   running: "secondary",
+  cancelled: "danger",
+  submitted: "default",
 };
 
 const INITIAL_VISIBLE_COLUMNS = [
@@ -101,8 +106,9 @@ const INITIAL_VISIBLE_COLUMNS = [
   "courseCode",
   "courseName",
   "courseCoordinator",
-  "expertFaculty",
-  "courseDuration",
+  "foreignFaculty",
+  "startDate",
+  "endDate",
   "status",
 ];
 
