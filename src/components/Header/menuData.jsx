@@ -24,20 +24,26 @@ const menuData = [
     submenu: [
       {
         id: 51,
-        title: "2020",
-        path: "/courses/2020",
+        title: "Phase 4",
+        path: "/courses/phase4",
         newTab: false,
       },
       {
         id: 52,
-        title: "2017-2019",
-        path: "/courses/2017-2019",
+        title: "Phase 3",
+        path: "/courses/phase3",
         newTab: false,
       },
       {
         id: 53,
-        title: "2015-2016",
-        path: "/courses/2015-2016",
+        title: "Phase 2",
+        path: "/courses/phase2",
+        newTab: false,
+      },
+      {
+        id: 54,
+        title: "Phase 1",
+        path: "/courses/phase1",
         newTab: false,
       },
     ],
