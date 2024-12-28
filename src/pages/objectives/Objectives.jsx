@@ -8,7 +8,7 @@ const Objectives = () => {
   const [objectives, setObjectives] = React.useState(null || "");
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_API}/objectives`)
+      .get(`${import.meta.env.VITE_API_FP2}/objectives`)
       .then((response) => {
         setObjectives(response.data.objectives);
       })
@@ -28,9 +28,9 @@ const Objectives = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 lg:px-12">
               <div className="text-base mb-8 sm:text-base md:text-lg lg:text-lg">
-                <p className="prose max-w-none prose-lg md:prose-base sm:prose-sm lg:prose-lg">
+                <div className="prose max-w-none prose-lg md:prose-base sm:prose-sm lg:prose-lg">
                   {parse(objectives)}
-                </p>
+                </div>
               </div>
             </div>
           </div>
