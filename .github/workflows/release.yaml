@@ -1,0 +1,43 @@
+name: Build and Release React App
+
+on:
+  push:
+    tags:
+      - 'v*.*.*' # Push events to matching v*.*.* tags
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Create .env file
+        run: |
+          echo "VITE_API_FP2=${{ secrets.VITE_API_FP2 }}" >> .env
+          echo "VITE_API_FP1=${{ secrets.VITE_API_FP1 }}" >> .env
+
+      - name: Build the project
+        run: npm run build
+
+      - name: Archive production artifacts
+        run: |
+          tar -czvf build.tar.gz build
+          zip -r build.zip build
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            build.tar.gz
+            build.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
