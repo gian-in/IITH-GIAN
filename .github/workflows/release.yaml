@@ -1,4 +1,4 @@
-name: Build and Release React App
+name: Build and Release
 
 on:
   push:
@@ -30,8 +30,8 @@ jobs:
 
       - name: Archive production artifacts
         run: |
-          tar -czvf build.tar.gz build
-          zip -r build.zip build
+          tar -czvf build.tar.gz dist
+          zip -r build.zip dist
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
