@@ -26,3 +26,10 @@ This is the repository for the IITH GIAN page. The page is hosted at [https://ii
    ```bash
    yarn dev
    ```
+
+   or
+4. To build
+   ```bash
+   yarn build
+   ```
+     Build files can be found in `dist` folder.
